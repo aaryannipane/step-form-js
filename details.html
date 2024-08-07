@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery-3.2.1.slim.min.js"></script>
+</head>
+
+<body>
+    <h1 class="text-center m-5">All Filled information</h1>
+
+    <div class="dataContainer w-25 m-auto p-5 border border-black">
+
+    </div>
+    <div class="text-center p-5">
+
+        <button id="prevBtn" class="btn btn-secondary">Back</button>
+    </div>
+
+
+    <script>
+        let dataContainer = document.querySelector(".dataContainer")
+
+        let formData = JSON.parse(localStorage.getItem("formData")) || {}
+        console.log(formData);
+
+
+
+        Object.keys(formData).length > 0 && Object.keys(formData).forEach((key, idx) => {
+
+            dataContainer.insertAdjacentHTML("beforeend", `<p ><b class="text-capitalize">${key}</b>: ${formData[key]}</p>`)
+        })
+
+        let prevBtn = document.querySelector("#prevBtn")
+        prevBtn.addEventListener('click', () => {
+            localStorage.setItem("isRefreshFromDetailPage", "true")
+            location.href = "index.html"
+        })
+
+    </script>
+</body>
+
+</html>

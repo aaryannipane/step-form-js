@@ -1,0 +1,86 @@
+/* STYLE-INDEX
+==================================================
+  ~1: HELPER STYLES
+  ~2: UI ELEMENTS
+
+*/
+
+
+/* ~1: HELPER STYLES
+==================================================
+*/
+
+/* Chrome, Safari, Edge, Opera */
+/* removing spinner on phone input box */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+
+.btn-group {
+  margin-top: 10px;
+  display: block;
+}
+
+.invalid {
+  border: 2px solid#b94a48;
+  background-color: #f2dede;
+}
+
+/* UI ELEMENTS 
+==================================================
+*/
+
+/* datepicker position fix */
+.datepicker {
+  transform: translate(0, 3.5em);
+}
+
+.input-validation-error {
+  /* background-color: #f2dede; */
+  color: #b94a48;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 !important;
+}
+
+
+
+.step-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.progress-dots {
+  width: 25px;
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: rgb(249 250 251);
+}
+
+.eyecon {
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+option{
+  background: white;
+}
